@@ -7,18 +7,13 @@
     >
       <slot name="item" />
       <span class="ml-auto">
-        <span v-if="isActive">
-          <angle-down-icon />
-        </span>
-        <span v-else>
-          <angle-right-icon />
-        </span>
+        <angle-down-icon v-show="isActive" />
+        <angle-right-icon v-show="!isActive" />
       </span>
     </div>
     <div
       id="accordion"
-      ref="myText"
-      :style="[isActive ? { height: computedHeight } : {}]"
+      ref="accordionRef"
       class="
         -mt-5
         overflow-hidden
@@ -27,6 +22,7 @@
         ease
         duration-300
       "
+      :style="[isActive ? { height: computedHeight } : {}]"
     >
       <slot name="panel" />
     </div>
@@ -42,23 +38,23 @@ export default {
   name: 'Accordion',
   components: { AngleRightIcon, AngleDownIcon },
   setup() {
-    const myText = ref();
-    const isActive = ref(false);
+    const accordionRef = ref();
     const computedHeight = ref('0');
+    const isActive = ref(false);
 
     const toggle = () => {
       isActive.value = !isActive.value;
     };
 
     const initHeight = () => {
-      myText.value.style.height = 'auto';
-      computedHeight.value = getComputedStyle(myText.value).height;
-      myText.value.style.height = '0';
+      accordionRef.value.style.height = 'auto';
+      computedHeight.value = getComputedStyle(accordionRef.value).height;
+      accordionRef.value.style.height = '0';
     };
 
     onMounted(initHeight);
 
-    return { toggle, computedHeight, myText, isActive };
+    return { accordionRef, computedHeight, isActive, toggle };
   },
 };
 </script>
