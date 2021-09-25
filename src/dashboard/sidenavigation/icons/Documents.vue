@@ -15,8 +15,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'DocumentIcon',
-};
-</script>
+<script setup></script>

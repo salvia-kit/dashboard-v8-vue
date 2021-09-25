@@ -17,11 +17,8 @@
   </pre>
 </template>
 
-<script>
-export default {
-  name: 'Snippet',
-  setup() {
-    const snippets = `<Accordion>
+<script setup>
+const snippets = `<Accordion>
       <template #item>
         <document-icon /> <span class="pl-3">Documents</span>
       </template>
@@ -31,8 +28,4 @@ export default {
         <sidenav-item title="Insurance" to="/documents/insurance" />
       </template>
     </Accordion>`;
-
-    return { snippets };
-  },
-};
 </script>

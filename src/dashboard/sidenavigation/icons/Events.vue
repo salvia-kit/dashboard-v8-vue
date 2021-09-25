@@ -15,8 +15,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'EventsIcon',
-};
-</script>
+<script setup></script>

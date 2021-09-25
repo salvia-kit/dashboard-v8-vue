@@ -29,34 +29,26 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted } from 'vue';
 import AngleDownIcon from './AngleDownIcon.vue';
 import AngleRightIcon from './AngleRightIcon.vue';
 
-export default {
-  name: 'Accordion',
-  components: { AngleRightIcon, AngleDownIcon },
-  setup() {
-    const accordionRef = ref();
-    const computedHeight = ref('0');
-    const isActive = ref(false);
+const accordionRef = ref();
+const computedHeight = ref('0');
+const isActive = ref(false);
 
-    const toggle = () => {
-      isActive.value = !isActive.value;
-    };
-
-    const initHeight = () => {
-      accordionRef.value.style.height = 'auto';
-      computedHeight.value = getComputedStyle(accordionRef.value).height;
-      accordionRef.value.style.height = '0';
-    };
-
-    onMounted(initHeight);
-
-    return { accordionRef, computedHeight, isActive, toggle };
-  },
+const toggle = () => {
+  isActive.value = !isActive.value;
 };
+
+const initHeight = () => {
+  accordionRef.value.style.height = 'auto';
+  computedHeight.value = getComputedStyle(accordionRef.value).height;
+  accordionRef.value.style.height = '0';
+};
+
+onMounted(initHeight);
 </script>
 
 <style scoped>

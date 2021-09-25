@@ -13,8 +13,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'AngleRightIcon',
-};
-</script>
+<script setup></script>

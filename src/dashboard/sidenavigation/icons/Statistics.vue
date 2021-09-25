@@ -21,8 +21,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'StatisticsIcon',
-};
-</script>
+<script setup></script>

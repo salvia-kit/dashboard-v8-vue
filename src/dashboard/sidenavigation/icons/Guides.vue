@@ -15,8 +15,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'GuidesIcon',
-};
-</script>
+<script setup></script>

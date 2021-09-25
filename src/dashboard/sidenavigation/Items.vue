@@ -65,7 +65,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import SidenavItem from './Item.vue';
 import Accordion from './accordion/Accordion.vue';
 
@@ -76,18 +76,4 @@ import MessagesIcon from './icons/Messages.vue';
 import PicturesIcon from './icons/Pictures.vue';
 import DocumentIcon from './icons/Documents.vue';
 import StatisticsIcon from './icons/Statistics.vue';
-
-export default {
-  name: 'SidenavItems',
-  components: {
-    Accordion,
-    EventsIcon,
-    GuidesIcon,
-    SidenavItem,
-    MessagesIcon,
-    PicturesIcon,
-    DocumentIcon,
-    StatisticsIcon,
-  },
-};
 </script>

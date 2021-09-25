@@ -2,13 +2,6 @@
   <Content title="Insurance Documents" />
 </template>
 
-<script>
+<script setup>
 import Content from '../../components/Content.vue';
-
-export default {
-  name: 'InsuranceDocumentsPage',
-  components: {
-    Content,
-  },
-};
 </script>

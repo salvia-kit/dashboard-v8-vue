@@ -13,8 +13,4 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'AngleDownIcon',
-};
-</script>
+<script setup></script>
